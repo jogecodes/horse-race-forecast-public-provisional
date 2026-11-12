@@ -1,0 +1,6 @@
+{
+  "name": "horse-race-forecast-notebook",
+  "compatibility_date": "2026-11-12",
+  "workers_dev": true,
+  "assets": { "directory": "./dist" }
+}

@@ -1,0 +1,151 @@
+{
+  "snapshot": "2026-11-12",
+  "scope": "20 January training / same 28 February development races; no tuning on February",
+  "metrics": {
+    "baseline": {
+      "valid_races": 28,
+      "metrics": {
+        "brier": 0.8148060983633316,
+        "log_loss": 1.8551627893581717
+      },
+      "errors": {}
+    },
+    "deterministic_form": {
+      "valid_races": 28,
+      "metrics": {
+        "brier": 0.8146028981214154,
+        "log_loss": 1.8445552143406727
+      },
+      "errors": {}
+    },
+    "optional_agent": {
+      "valid_races": 28,
+      "metrics": {
+        "brier": 0.812522697274462,
+        "log_loss": 1.8230203950277173
+      },
+      "errors": {}
+    }
+  },
+  "article_minus_form": {
+    "races": 28,
+    "meeting_clusters": 6,
+    "samples": 4000,
+    "seed": 20261112,
+    "method": "Meeting-cluster percentile bootstrap; races equally weighted; exploratory fixed-model development uncertainty, not training uncertainty",
+    "brier": {
+      "difference": -0.002080200846952968,
+      "interval_95": [
+        -0.003949859700446899,
+        1.0831322296896613e-05
+      ]
+    },
+    "log_loss": {
+      "difference": -0.021534819312955013,
+      "interval_95": [
+        -0.05757512302571337,
+        -0.0008526708469997351
+      ]
+    }
+  },
+  "article_minus_baseline": {
+    "races": 28,
+    "meeting_clusters": 6,
+    "samples": 4000,
+    "seed": 20261112,
+    "method": "Meeting-cluster percentile bootstrap; races equally weighted; exploratory fixed-model development uncertainty, not training uncertainty",
+    "brier": {
+      "difference": -0.0022834010888694778,
+      "interval_95": [
+        -0.009076079035979052,
+        0.0029208877607123764
+      ]
+    },
+    "log_loss": {
+      "difference": -0.03214239433045451,
+      "interval_95": [
+        -0.06724205893486196,
+        0.0028998206631902384
+      ]
+    }
+  },
+  "extraction": {
+    "processed": 368,
+    "model_calls": 34,
+    "statuses": {
+      "complete": 364,
+      "failed": 4
+    },
+    "assessments": {
+      "unknown": 338,
+      "selected": 20,
+      "opposed": 6,
+      "failed": 4
+    },
+    "reference_scored": 26,
+    "reference_accuracy": 0.7692307692307693
+  },
+  "runners_with_article_signal": 26,
+  "corrected_zero_signal_max_difference": 8.41867029977017e-08,
+  "market": {
+    "baseline": {
+      "paired_races": 17,
+      "metrics": {
+        "model_brier": 0.8278355930586292,
+        "market_brier": 0.7994988332002966,
+        "model_minus_market_brier": 0.02833675985833274,
+        "model_log_loss": 1.882358940767096,
+        "market_log_loss": 1.7853210475065933,
+        "model_minus_market_log_loss": 0.09703789326050259,
+        "model_market_squared_distance": 0.04894963613141193
+      }
+    },
+    "deterministic_form": {
+      "paired_races": 17,
+      "metrics": {
+        "model_brier": 0.8275699977865864,
+        "market_brier": 0.7994988332002966,
+        "model_minus_market_brier": 0.028071164586289776,
+        "model_log_loss": 1.8657794182635008,
+        "market_log_loss": 1.7853210475065933,
+        "model_minus_market_log_loss": 0.08045837075690787,
+        "model_market_squared_distance": 0.048340114364322784
+      }
+    },
+    "optional_agent": {
+      "paired_races": 17,
+      "metrics": {
+        "model_brier": 0.822971417901148,
+        "market_brier": 0.7994988332002966,
+        "model_minus_market_brier": 0.02347258470085145,
+        "model_log_loss": 1.8415340166499805,
+        "market_log_loss": 1.7853210475065933,
+        "model_minus_market_log_loss": 0.056212969143387304,
+        "model_market_squared_distance": 0.04991147772085374
+      }
+    }
+  },
+  "verified_closing_races": 0,
+  "reliability": {
+    "baseline": {
+      "ece": 0.026627851998657734,
+      "runners": 214
+    },
+    "deterministic_form": {
+      "ece": 0.018233662260057938,
+      "runners": 214
+    },
+    "optional_agent": {
+      "ece": 0.016670010125938665,
+      "runners": 214
+    }
+  },
+  "caveats": [
+    "Assistant-reviewed selected reference cases; independent human review pending",
+    "January-February development outcomes were previously inspected; not an unseen backtest",
+    "Only two target-date preview articles; limited coverage and source concentration",
+    "Meeting bootstrap describes fixed-model evaluation uncertainty, not fitting uncertainty",
+    "No new model calibration; no claimed per-horse uncertainty intervals",
+    "No website export or publication; no March-June evaluation"
+  ]
+}

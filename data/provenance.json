@@ -1,0 +1,71 @@
+{
+  "snapshot": "2026-11-12",
+  "policy": "Curated aggregates and research explanations only. No raw sources, runner-level records, traces, labels, databases or credentials.",
+  "sources": [
+    {
+      "id": "history",
+      "path": "docs/HISTORICAL_BACKFILL.md",
+      "sha256": "8107eadca89de826a6be6f12482e34587ed08cb399069cb962580a1db4014318"
+    },
+    {
+      "id": "declarations",
+      "path": "docs/RECOVERED_BENCHMARK_H1_2026.md",
+      "sha256": "1b1997696553fae3364f463bdea517b2cfb38ea9eb76079ce4e44266173de48c"
+    },
+    {
+      "id": "engine",
+      "path": "docs/FORECASTING_ENGINE.md",
+      "sha256": "bfe5342260366784db9df27cd60c9df3dd6468a3889ae758091c7c1e29880215"
+    },
+    {
+      "id": "research",
+      "path": "docs/WEB_SOCIAL_RESEARCH.md",
+      "sha256": "d38f210a2383f2381a804326f35416683c08b4384b350be41cf3480e95933d99"
+    },
+    {
+      "id": "checkpoint",
+      "path": "docs/DEVELOPMENT_CHECKPOINT_20261105.md",
+      "sha256": "d43ad8b68e455b75a008bf14571f5b8f983174a078c31a832022d786e9ffc709"
+    },
+    {
+      "id": "grounding",
+      "path": "docs/EVENT_GROUNDED_REVIEW.md",
+      "sha256": "041bd876bccacfde95b793728a09cd94353b2c57808eaa91903d29a29f0bb325"
+    },
+    {
+      "id": "baseline",
+      "path": "docs/STATISTICAL_BASELINES_20261111.md",
+      "sha256": "3223af91d969b4022deb1903064d96856915eeec52765b86895c96e4d2305307"
+    },
+    {
+      "id": "correction",
+      "path": "docs/RESEARCH_RELEASE_20261112.md",
+      "sha256": "b39099ba4edc769ea21a2dae9caa7fd5f174997ee0a4e1ca56b8b0b09e5aa739"
+    },
+    {
+      "id": "articles",
+      "path": "docs/ARTICLE_COMPONENT_20261112.md",
+      "sha256": "0d700c8cbc7cd3a7d828ccd068c4f45609754f419df9da42cce032c64ca3b12d"
+    },
+    {
+      "id": "article-summary",
+      "path": "runs/article_component_evaluation_20261112/summary.json",
+      "sha256": "2037e8227290c7370e96e09543c9d9da0d463f9884cc3c671458457f5b9865dc"
+    },
+    {
+      "id": "correction-summary",
+      "path": "runs/research_release_20261112/summary.json",
+      "sha256": "a58b65bdda3cdb330c80b2ba12cac3fe58f45895e88af3f9ddc00f760998f225"
+    },
+    {
+      "id": "fixture",
+      "path": "tests/test_engine.py",
+      "sha256": "6cc77ba26a0b8cbec9464121662cb8a50efb5f1a5d6c553024d2e1231d85c29f"
+    },
+    {
+      "id": "protocol",
+      "path": "benchmarks/h1_2026_v2/protocol.json",
+      "sha256": "b1fb44015c5092cf5b5b5a692a67622bfbd7a87dbe0d835daa24f6e94b60cf33"
+    }
+  ]
+}
