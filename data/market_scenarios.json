@@ -1,0 +1,505 @@
+{
+  "study": "anz-2024-market-scenarios-v1",
+  "computed_at": "2026-11-13T14:07:45.128747+00:00",
+  "code_sha256": "ae58f428bbd954dbe6bca10151658e98cfc254f1a7037600f8d552d908f6ab06",
+  "source": {
+    "url": "https://betfair-datascientists.github.io/data/assets/ANZ_Thoroughbreds_2024.zip",
+    "sha256": "effe8d4183ffe6dfd410467561f788d199fc6164dd874610a93cb95e93765fef"
+  },
+  "cohort": {
+    "races": 19485,
+    "case_quality_eligible": 19037,
+    "tied_favorite_exclusions": 339
+  },
+  "case_studies": {
+    "selection": "Three highest realized normalized Brier losses among recorded markets with raw inverse-price total in [0.95,1.10]; outcome-selected diagnostics, not opportunities",
+    "races": [
+      {
+        "market_id": "223160627",
+        "date": "2024-01-05",
+        "track": "Ballina",
+        "state": "NSW",
+        "race_number": "4",
+        "race_name": "R4 1600m Hcap",
+        "distance_m": 1600,
+        "field_size": 6,
+        "probability_total": 1.009162607961556,
+        "favorite": {
+          "name": "Jovita",
+          "odds": 1.18,
+          "raw_probability": 0.8474576271186441,
+          "probability": 0.8397632060807865,
+          "won": false
+        },
+        "winner": {
+          "name": "Beef Week Princess",
+          "odds": 29.0,
+          "raw_probability": 0.034482758620689655,
+          "probability": 0.03416967528190786
+        },
+        "market_race_brier": 1.6432895078976588,
+        "market_expected_brier": 0.2883711415385254,
+        "brier_percentile": 1.0
+      },
+      {
+        "market_id": "230183961",
+        "date": "2024-06-29",
+        "track": "Gold Coast",
+        "state": "QLD",
+        "race_number": "1",
+        "race_name": "R1 1200m 2yo",
+        "distance_m": 1200,
+        "field_size": 9,
+        "probability_total": 1.0136257793165226,
+        "favorite": {
+          "name": "Hell March",
+          "odds": 1.24,
+          "raw_probability": 0.8064516129032259,
+          "probability": 0.7956107957781103,
+          "won": false
+        },
+        "winner": {
+          "name": "Snowy Finn",
+          "odds": 120.0,
+          "raw_probability": 0.008333333333333333,
+          "probability": 0.008221311556373807
+        },
+        "market_race_brier": 1.6338095999520557,
+        "market_expected_brier": 0.34974777693519665,
+        "brier_percentile": 0.9999486784706184
+      },
+      {
+        "market_id": "224414616",
+        "date": "2024-02-05",
+        "track": "Balaklava",
+        "state": "SA",
+        "race_number": "2",
+        "race_name": "R2 1400m Mdn",
+        "distance_m": 1400,
+        "field_size": 10,
+        "probability_total": 1.004563668889796,
+        "favorite": {
+          "name": "Reel Whiskey",
+          "odds": 1.27,
+          "raw_probability": 0.7874015748031495,
+          "probability": 0.7838244595022579,
+          "won": false
+        },
+        "winner": {
+          "name": "Bonsa Big Boy",
+          "odds": 120.0,
+          "raw_probability": 0.008333333333333333,
+          "probability": 0.008295475529732229
+        },
+        "market_race_brier": 1.6076379493470232,
+        "market_expected_brier": 0.3757710995935124,
+        "brier_percentile": 0.9998973569412368
+      }
+    ]
+  },
+  "subgroup_check": {
+    "definitions": {
+      "field_small": "Fields of 2\u20137 runners",
+      "field_medium": "Fields of 8\u201311 runners",
+      "field_large": "Fields of 12+ runners",
+      "distance_sprint": "Distances up to 1,200 m",
+      "distance_mile": "Distances 1,201\u20131,600 m",
+      "distance_middle": "Distances 1,601\u20132,200 m",
+      "distance_staying": "Distances above 2,200 m",
+      "type_maiden": "Maiden races",
+      "type_handicap": "Explicit handicap race-type codes",
+      "type_other": "Other race-type codes",
+      "favorite_below_20": "Favorite assigned below 20%",
+      "favorite_20_40": "Favorite assigned 20\u201340%",
+      "favorite_40_60": "Favorite assigned 40\u201360%",
+      "favorite_60_plus": "Favorite assigned at least 60%"
+    },
+    "selection": "Largest absolute favorite win-frequency minus normalized probability gaps in January\u2013June, minimum 250 races per candidate; report July\u2013December without retuning",
+    "candidate_groups": 14,
+    "selected": [
+      {
+        "key": "distance_middle",
+        "label": "Distances 1,601\u20132,200 m",
+        "first_half": {
+          "races": 1389,
+          "wins": 492,
+          "mean_probability": 0.3245757479428077,
+          "observed_win_rate": 0.3542116630669546,
+          "observed_minus_predicted": 0.029635915124146987,
+          "meeting_clusters": 889
+        },
+        "second_half": {
+          "races": 1438,
+          "wins": 458,
+          "mean_probability": 0.31921817576699496,
+          "observed_win_rate": 0.3184979137691238,
+          "observed_minus_predicted": -0.0007202619978711637,
+          "meeting_clusters": 900,
+          "gap_interval_95": [
+            -0.024792676339662964,
+            0.02452480949865938
+          ]
+        },
+        "same_direction": false
+      },
+      {
+        "key": "distance_staying",
+        "label": "Distances above 2,200 m",
+        "first_half": {
+          "races": 276,
+          "wins": 105,
+          "mean_probability": 0.35242059647265284,
+          "observed_win_rate": 0.3804347826086957,
+          "observed_minus_predicted": 0.028014186136042847,
+          "meeting_clusters": 188
+        },
+        "second_half": {
+          "races": 281,
+          "wins": 95,
+          "mean_probability": 0.3368423136146173,
+          "observed_win_rate": 0.33807829181494664,
+          "observed_minus_predicted": 0.0012359782003292874,
+          "meeting_clusters": 199,
+          "gap_interval_95": [
+            -0.05537878588304143,
+            0.054512699262938044
+          ]
+        },
+        "same_direction": true
+      },
+      {
+        "key": "field_large",
+        "label": "Fields of 12+ runners",
+        "first_half": {
+          "races": 2489,
+          "wins": 765,
+          "mean_probability": 0.2871189165811678,
+          "observed_win_rate": 0.3073523503415026,
+          "observed_minus_predicted": 0.02023343376033483,
+          "meeting_clusters": 885
+        },
+        "second_half": {
+          "races": 2462,
+          "wins": 739,
+          "mean_probability": 0.2850914170942227,
+          "observed_win_rate": 0.3001624695369618,
+          "observed_minus_predicted": 0.01507105244273912,
+          "meeting_clusters": 870,
+          "gap_interval_95": [
+            -0.0015506480830263893,
+            0.03283135752124303
+          ]
+        },
+        "same_direction": true
+      }
+    ],
+    "all_first_half_rankings": [
+      {
+        "key": "distance_middle",
+        "label": "Distances 1,601\u20132,200 m",
+        "first_half": {
+          "races": 1389,
+          "wins": 492,
+          "mean_probability": 0.3245757479428077,
+          "observed_win_rate": 0.3542116630669546,
+          "observed_minus_predicted": 0.029635915124146987,
+          "meeting_clusters": 889
+        },
+        "second_half": {
+          "races": 1438,
+          "wins": 458,
+          "mean_probability": 0.31921817576699496,
+          "observed_win_rate": 0.3184979137691238,
+          "observed_minus_predicted": -0.0007202619978711637,
+          "meeting_clusters": 900,
+          "gap_interval_95": [
+            -0.024792676339662964,
+            0.02452480949865938
+          ]
+        }
+      },
+      {
+        "key": "distance_staying",
+        "label": "Distances above 2,200 m",
+        "first_half": {
+          "races": 276,
+          "wins": 105,
+          "mean_probability": 0.35242059647265284,
+          "observed_win_rate": 0.3804347826086957,
+          "observed_minus_predicted": 0.028014186136042847,
+          "meeting_clusters": 188
+        },
+        "second_half": {
+          "races": 281,
+          "wins": 95,
+          "mean_probability": 0.3368423136146173,
+          "observed_win_rate": 0.33807829181494664,
+          "observed_minus_predicted": 0.0012359782003292874,
+          "meeting_clusters": 199,
+          "gap_interval_95": [
+            -0.05537878588304143,
+            0.054512699262938044
+          ]
+        }
+      },
+      {
+        "key": "field_large",
+        "label": "Fields of 12+ runners",
+        "first_half": {
+          "races": 2489,
+          "wins": 765,
+          "mean_probability": 0.2871189165811678,
+          "observed_win_rate": 0.3073523503415026,
+          "observed_minus_predicted": 0.02023343376033483,
+          "meeting_clusters": 885
+        },
+        "second_half": {
+          "races": 2462,
+          "wins": 739,
+          "mean_probability": 0.2850914170942227,
+          "observed_win_rate": 0.3001624695369618,
+          "observed_minus_predicted": 0.01507105244273912,
+          "meeting_clusters": 870,
+          "gap_interval_95": [
+            -0.0015506480830263893,
+            0.03283135752124303
+          ]
+        }
+      },
+      {
+        "key": "favorite_below_20",
+        "label": "Favorite assigned below 20%",
+        "first_half": {
+          "races": 703,
+          "wins": 138,
+          "mean_probability": 0.17964731636113607,
+          "observed_win_rate": 0.19630156472261737,
+          "observed_minus_predicted": 0.016654248361481265,
+          "meeting_clusters": 482
+        },
+        "second_half": {
+          "races": 700,
+          "wins": 120,
+          "mean_probability": 0.1784382172891798,
+          "observed_win_rate": 0.17142857142857143,
+          "observed_minus_predicted": -0.00700964586060837,
+          "meeting_clusters": 482
+        }
+      },
+      {
+        "key": "type_handicap",
+        "label": "Explicit handicap race-type codes",
+        "first_half": {
+          "races": 4425,
+          "wins": 1442,
+          "mean_probability": 0.3097645802335037,
+          "observed_win_rate": 0.32587570621468925,
+          "observed_minus_predicted": 0.0161111259811856,
+          "meeting_clusters": 1218
+        },
+        "second_half": {
+          "races": 4692,
+          "wins": 1513,
+          "mean_probability": 0.3102798165303075,
+          "observed_win_rate": 0.322463768115942,
+          "observed_minus_predicted": 0.012183951585634553,
+          "meeting_clusters": 1229
+        }
+      },
+      {
+        "key": "favorite_20_40",
+        "label": "Favorite assigned 20\u201340%",
+        "first_half": {
+          "races": 6307,
+          "wins": 1938,
+          "mean_probability": 0.2941238520100838,
+          "observed_win_rate": 0.30727762803234504,
+          "observed_minus_predicted": 0.013153776022261247,
+          "meeting_clusters": 1246
+        },
+        "second_half": {
+          "races": 6504,
+          "wins": 1986,
+          "mean_probability": 0.29457017167328764,
+          "observed_win_rate": 0.3053505535055351,
+          "observed_minus_predicted": 0.010780381832247391,
+          "meeting_clusters": 1264
+        }
+      },
+      {
+        "key": "favorite_60_plus",
+        "label": "Favorite assigned at least 60%",
+        "first_half": {
+          "races": 483,
+          "wins": 323,
+          "mean_probability": 0.6797357647150454,
+          "observed_win_rate": 0.6687370600414079,
+          "observed_minus_predicted": -0.010998704673637585,
+          "meeting_clusters": 402
+        },
+        "second_half": {
+          "races": 346,
+          "wins": 244,
+          "mean_probability": 0.6668555832286641,
+          "observed_win_rate": 0.7052023121387283,
+          "observed_minus_predicted": 0.03834672891006419,
+          "meeting_clusters": 286
+        }
+      },
+      {
+        "key": "distance_sprint",
+        "label": "Distances up to 1,200 m",
+        "first_half": {
+          "races": 3992,
+          "wins": 1473,
+          "mean_probability": 0.36140991739916345,
+          "observed_win_rate": 0.3689879759519038,
+          "observed_minus_predicted": 0.007578058552740392,
+          "meeting_clusters": 1230
+        },
+        "second_half": {
+          "races": 3914,
+          "wins": 1432,
+          "mean_probability": 0.3533936535706765,
+          "observed_win_rate": 0.3658661216147164,
+          "observed_minus_predicted": 0.012472468044039894,
+          "meeting_clusters": 1236
+        }
+      },
+      {
+        "key": "favorite_40_60",
+        "label": "Favorite assigned 40\u201360%",
+        "first_half": {
+          "races": 2047,
+          "wins": 965,
+          "mean_probability": 0.4783685998211446,
+          "observed_win_rate": 0.4714215925744993,
+          "observed_minus_predicted": -0.006947007246645359,
+          "meeting_clusters": 1032
+        },
+        "second_half": {
+          "races": 2056,
+          "wins": 966,
+          "mean_probability": 0.47490869411248465,
+          "observed_win_rate": 0.4698443579766537,
+          "observed_minus_predicted": -0.005064336135830976,
+          "meeting_clusters": 1030
+        }
+      },
+      {
+        "key": "field_medium",
+        "label": "Fields of 8\u201311 runners",
+        "first_half": {
+          "races": 5449,
+          "wins": 1917,
+          "mean_probability": 0.3468817195758092,
+          "observed_win_rate": 0.35180767113231787,
+          "observed_minus_predicted": 0.004925951556508644,
+          "meeting_clusters": 1237
+        },
+        "second_half": {
+          "races": 5536,
+          "wins": 1930,
+          "mean_probability": 0.34013574383376177,
+          "observed_win_rate": 0.3486271676300578,
+          "observed_minus_predicted": 0.008491423796295992,
+          "meeting_clusters": 1246
+        }
+      },
+      {
+        "key": "type_other",
+        "label": "Other race-type codes",
+        "first_half": {
+          "races": 2656,
+          "wins": 968,
+          "mean_probability": 0.36315549316606605,
+          "observed_win_rate": 0.3644578313253012,
+          "observed_minus_predicted": 0.0013023381592351746,
+          "meeting_clusters": 1064
+        },
+        "second_half": {
+          "races": 2435,
+          "wins": 877,
+          "mean_probability": 0.35100383444552374,
+          "observed_win_rate": 0.3601642710472279,
+          "observed_minus_predicted": 0.009160436601704208,
+          "meeting_clusters": 1057
+        }
+      },
+      {
+        "key": "field_small",
+        "label": "Fields of 2\u20137 runners",
+        "first_half": {
+          "races": 1602,
+          "wins": 682,
+          "mean_probability": 0.4270078794516954,
+          "observed_win_rate": 0.4257178526841448,
+          "observed_minus_predicted": -0.0012900267675505493,
+          "meeting_clusters": 787
+        },
+        "second_half": {
+          "races": 1608,
+          "wins": 647,
+          "mean_probability": 0.41234384876131436,
+          "observed_win_rate": 0.402363184079602,
+          "observed_minus_predicted": -0.009980664681712333,
+          "meeting_clusters": 806
+        }
+      },
+      {
+        "key": "distance_mile",
+        "label": "Distances 1,201\u20131,600 m",
+        "first_half": {
+          "races": 3883,
+          "wins": 1294,
+          "mean_probability": 0.33428068695448226,
+          "observed_win_rate": 0.3332474890548545,
+          "observed_minus_predicted": -0.001033197899627767,
+          "meeting_clusters": 1215
+        },
+        "second_half": {
+          "races": 3973,
+          "wins": 1331,
+          "mean_probability": 0.3299935234340803,
+          "observed_win_rate": 0.3350113264535615,
+          "observed_minus_predicted": 0.005017803019481239,
+          "meeting_clusters": 1229
+        }
+      },
+      {
+        "key": "type_maiden",
+        "label": "Maiden races",
+        "first_half": {
+          "races": 2459,
+          "wins": 954,
+          "mean_probability": 0.38780595316730454,
+          "observed_win_rate": 0.3879625864172428,
+          "observed_minus_predicted": 0.00015663324993823432,
+          "meeting_clusters": 1042
+        },
+        "second_half": {
+          "races": 2479,
+          "wins": 926,
+          "mean_probability": 0.37813966096120294,
+          "observed_win_rate": 0.37353771682129894,
+          "observed_minus_predicted": -0.004601944139904059,
+          "meeting_clusters": 1062
+        }
+      }
+    ]
+  },
+  "uncertainty": {
+    "draws": 4000,
+    "seed": 20261114,
+    "method": "Whole-meeting percentile bootstrap of later-period mean favorite outcome-minus-probability gap"
+  },
+  "caveats": [
+    "No independent model probabilities for this ANZ cohort: model-market disagreement is not measured.",
+    "High realized error identifies an outcome surprise; a well-calibrated forecast can have rare large errors.",
+    "Fourteen overlapping pre-race subgroup definitions explored; discovery gaps are selection-biased. Later intervals are pointwise and not multiple-testing adjusted.",
+    "Later half is a chronological descriptive check, not fresh blind evidence: pooled 2024 outcomes were already inspected in the calibration study.",
+    "The same source, timing, settled-field, liquidity and execution limitations as the parent study apply.",
+    "Race examples use an additional quote-quality screen of 95\u2013110% raw total, solely to avoid highlighting extreme book totals; the published calibration cohort is unchanged.",
+    "No demonstrated predictive edge, fitted recalibration or profitability test."
+  ]
+}

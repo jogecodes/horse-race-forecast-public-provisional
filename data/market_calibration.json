@@ -1,0 +1,266 @@
+{
+  "study": "anz-2024-scheduled-off-back-prices-v1",
+  "computed_at": "2026-11-13T10:21:54.391526+00:00",
+  "source": {
+    "listing_url": "https://betfair-datascientists.github.io/data/dataListing/",
+    "archive_url": "https://betfair-datascientists.github.io/data/assets/ANZ_Thoroughbreds_2024.zip",
+    "archive_sha256": "effe8d4183ffe6dfd410467561f788d199fc6164dd874610a93cb95e93765fef",
+    "archive_bytes": 13321669,
+    "csv_files": 12,
+    "scope": "Australia and New Zealand thoroughbred racing, calendar 2024",
+    "price_column": "BEST_AVAIL_BACK_AT_SCHEDULED_OFF",
+    "outcome_column": "WIN_RESULT",
+    "timing": "Publisher-reported scheduled-off snapshot, kept only when scheduled clock precedes reported actual-off clock on the same local date"
+  },
+  "coverage": {
+    "source_markets": 19550,
+    "source_runner_rows": 193342,
+    "races": 19485,
+    "runners": 192643,
+    "meeting_clusters": 2513,
+    "first_date": "2024-01-01",
+    "last_date": "2024-12-31",
+    "excluded_markets": {
+      "scheduled_clock_not_strictly_before_actual_clock": 33,
+      "not_exactly_one_winner_including_dead_heats": 24,
+      "duplicate_runner_identity": 8
+    }
+  },
+  "probability_total": {
+    "mean": 1.0163515779546413,
+    "median": 1.0184269205123604,
+    "minimum": 0.3571780619506312,
+    "maximum": 1.3086007556127148
+  },
+  "metrics": {
+    "raw_mean_race_sum_squared_error": 0.7780725575404276,
+    "normalized_mean_race_brier": 0.7779231908882775,
+    "normalized_minus_raw": -0.0001493666521500403,
+    "paired_difference_interval_95": [
+      -0.00028876448573305437,
+      -1.1030579640956936e-05
+    ],
+    "raw_mean_runner_binary_brier": 0.07869864871121832,
+    "normalized_mean_runner_binary_brier": 0.07868354092522484
+  },
+  "near_40_percent": {
+    "raw": {
+      "lower": 0.375,
+      "upper": 0.425,
+      "runners": 2123,
+      "wins": 837,
+      "losses": 1286,
+      "mean_probability": 0.3983548015881535,
+      "observed_win_rate": 0.39425341497880356,
+      "observed_minus_predicted": -0.004101386609349919,
+      "win_rate_interval_95": [
+        0.37446803461612255,
+        0.41514826786835635
+      ],
+      "observed_minus_predicted_interval_95": [
+        -0.023775959337937275,
+        0.016734182183857606
+      ]
+    },
+    "normalized": {
+      "lower": 0.375,
+      "upper": 0.425,
+      "runners": 2043,
+      "wins": 824,
+      "losses": 1219,
+      "mean_probability": 0.39826039847709077,
+      "observed_win_rate": 0.4033284385707293,
+      "observed_minus_predicted": 0.0050680400936385685,
+      "win_rate_interval_95": [
+        0.38279752121745864,
+        0.4247118229711688
+      ],
+      "observed_minus_predicted_interval_95": [
+        -0.015261610944619187,
+        0.026569554025797016
+      ]
+    }
+  },
+  "reliability": {
+    "raw": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "runners": 121204,
+        "wins": 4488,
+        "mean_probability": 0.038724639830449804,
+        "observed_win_rate": 0.03702848090822085
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "runners": 41702,
+        "wins": 5684,
+        "mean_probability": 0.13954884404483017,
+        "observed_win_rate": 0.13630041724617525
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "runners": 17512,
+        "wins": 4236,
+        "mean_probability": 0.24180437811701316,
+        "observed_win_rate": 0.24189127455459114
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "runners": 6974,
+        "wins": 2457,
+        "mean_probability": 0.3415942614331431,
+        "observed_win_rate": 0.35230857470605104
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "runners": 2858,
+        "wins": 1255,
+        "mean_probability": 0.4413357847466978,
+        "observed_win_rate": 0.4391182645206438
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "runners": 1519,
+        "wins": 772,
+        "mean_probability": 0.5402839553674953,
+        "observed_win_rate": 0.5082290980908493
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "runners": 616,
+        "wins": 393,
+        "mean_probability": 0.6453547369394722,
+        "observed_win_rate": 0.637987012987013
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "runners": 221,
+        "wins": 169,
+        "mean_probability": 0.7400746241886761,
+        "observed_win_rate": 0.7647058823529411
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "runners": 35,
+        "wins": 29,
+        "mean_probability": 0.8249344153881943,
+        "observed_win_rate": 0.8285714285714286
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "runners": 2,
+        "wins": 2,
+        "mean_probability": 0.9049959049959049,
+        "observed_win_rate": 1.0
+      }
+    ],
+    "normalized": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "runners": 124980,
+        "wins": 4879,
+        "mean_probability": 0.03986824757077525,
+        "observed_win_rate": 0.0390382461193791
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "runners": 39270,
+        "wins": 5558,
+        "mean_probability": 0.1429382849964896,
+        "observed_win_rate": 0.14153297682709448
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "runners": 16600,
+        "wins": 4129,
+        "mean_probability": 0.24267038283138603,
+        "observed_win_rate": 0.24873493975903616
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "runners": 6827,
+        "wins": 2405,
+        "mean_probability": 0.3415667611093634,
+        "observed_win_rate": 0.3522777208144134
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "runners": 2803,
+        "wins": 1250,
+        "mean_probability": 0.4444219392403828,
+        "observed_win_rate": 0.4459507670353193
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "runners": 1334,
+        "wins": 697,
+        "mean_probability": 0.5428157660063058,
+        "observed_win_rate": 0.5224887556221889
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "runners": 586,
+        "wins": 383,
+        "mean_probability": 0.6437708618177436,
+        "observed_win_rate": 0.6535836177474402
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "runners": 214,
+        "wins": 157,
+        "mean_probability": 0.736667709741301,
+        "observed_win_rate": 0.7336448598130841
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "runners": 29,
+        "wins": 27,
+        "mean_probability": 0.8326824567120326,
+        "observed_win_rate": 0.9310344827586207
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "runners": 0,
+        "wins": 0,
+        "predicted_sum": 0.0,
+        "mean_probability": null,
+        "observed_win_rate": null
+      }
+    ]
+  },
+  "uncertainty": {
+    "method": "Whole-meeting percentile bootstrap; same draws for raw/normalized; race-weighted score means; runner-weighted frequency bins",
+    "draws": 4000,
+    "seed": 20261113
+  },
+  "caveats": [
+    "Independent market-only study; not the Spanish 2026 model cohort and not a model-versus-market comparison.",
+    "Exchange back prices, not bookmaker fixed odds or BSP; exchange commission, liquidity and executable size not evaluated.",
+    "Provider historical compilation; timing and complete-field availability not independently certified. Same-day time ordering excludes possible midnight crossovers conservatively.",
+    "The recorded settled runner set is used; later withdrawals and full contemporaneous field completeness are not independently reconstructed.",
+    "Raw inverse prices are evaluated as binary marginal predictions and need not be a coherent race distribution. Race sum of binary Brier losses is compared with the same sum for normalized probabilities.",
+    "Ten fixed 10-percentage-point bins; the 40% band is [37.5%,42.5%). Raw and normalized band membership differs.",
+    "Intervals resample meetings, not independent horses. This is descriptive analysis without fitted recalibration or a held-out profitability test.",
+    "Source accuracy and completeness are not warranted by the provider. No demonstrated betting edge follows from a calibration difference."
+  ]
+}
